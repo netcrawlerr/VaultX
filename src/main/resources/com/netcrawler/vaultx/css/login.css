@@ -1,0 +1,53 @@
+#loginBody {
+  -fx-background-color: #1f1f1f;
+  -fx-padding: 20;
+}
+
+#loginLabel {
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 16px;
+  -fx-font-family: "Arial";
+}
+
+#username,
+#password {
+  -fx-background-color: #2c2c2c;
+  -fx-text-fill: #ffffff;
+  -fx-border-color: #4b5563;
+  -fx-border-radius: 5;
+  -fx-padding: 7;
+}
+
+#loginButton {
+  -fx-background-color: #4b5563;
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+  -fx-font-family: "Arial";
+  -fx-padding: 7 10;
+  -fx-background-radius: 5;
+  -fx-effect: dropshadow(gaussian, #000000, 5, 0, 0, 1);
+  -fx-transition: background-color 0.3s ease;
+}
+
+#loginButton:hover {
+  -fx-cursor: hand;
+  -fx-background-color: #374151;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 8, 0, 0, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#loginBody {
+  -fx-animation: fadeIn 1s forwards;
+}
+
+#footer {
+  -fx-text-fill: white;
+}
