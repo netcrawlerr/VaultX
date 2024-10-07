@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.netcrawler.vaultx.controllers.DashboardController">
+    <top>
+        <ToolBar>
+            <Button text="Home" onAction="#handleHomeAction"/>
+            <Button text="Settings" onAction="#handleSettingsAction"/>
+            <Button text="Logout" onAction="#handleLogoutAction"/>
+        </ToolBar>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20" padding="20">
+            <Label fx:id="lbl" text="Welcome to VaultX" styleClass="header-label" />
+            <TextArea fx:id="statusMessage" prefHeight="100" editable="false" wrapText="true" promptText="Status messages will appear here..." />
+            <Button text="Refresh Data" onAction="#handleRefreshData" />
+        </VBox>
+    </center>
+    <bottom>
+        <Label text="© 2024 NetCrawler. All rights reserved." alignment="CENTER"/>
+    </bottom>
+</BorderPane>

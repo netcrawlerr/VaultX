@@ -1,26 +1,50 @@
 package com.netcrawler.vaultx.controllers;
 
+import java.io.IOException;
+ 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class AuthController {
+    
+    ScreenController screenController = new ScreenController();
 
     @FXML
-    private TextField username; // Must match fx:id="username" in FXML
+    private TextField username;
 
     @FXML
-    private PasswordField password; // Must match fx:id="password" in FXML
+    private PasswordField password; 
 
     @FXML
-    private void handleLogin() {
+    private Button loginButton;
+
+    @FXML
+    private Label errorLabel; 
+
+    @FXML
+    private void handleLogin(ActionEvent event) throws IOException {
         String user = username.getText();
         String pass = password.getText();
-        loginUser(user, pass);
+        loginUser(event, user, pass); 
     }
 
-    public static void loginUser(String username, String password) {
-        System.out.println("username is :" + username);
-        System.out.println("password is :" + password);
+    public void loginUser(ActionEvent event, String username, String password) throws IOException {
+        System.out.println("is empty ? " + username.isEmpty());
+        if (username.isEmpty() || password.isEmpty()) {
+            errorLabel.setText("Fields cannot be empty");
+            System.out.println("Both fields can't be empty");
+            return;
+        } 
+        else{
+            
+            System.out.println(username);
+            System.out.println(password);
+            screenController.switchToDashboard(event);
+        }
+        
     }
 }

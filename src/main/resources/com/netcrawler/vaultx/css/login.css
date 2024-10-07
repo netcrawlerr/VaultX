@@ -51,3 +51,16 @@
 #footer {
   -fx-text-fill: white;
 }
+
+.footer-container {
+  -fx-display: flex;
+  -fx-flex-direction: row;
+}
+
+.hey {
+  --fx-background-color: red;
+}
+
+#errorLabel {
+  -fx-text-fill: red;
+}

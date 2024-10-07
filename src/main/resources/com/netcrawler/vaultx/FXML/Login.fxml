@@ -15,20 +15,22 @@
          <children>
             <ImageView fitHeight="113.0" fitWidth="92.0" layoutX="19.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/lock.png" />
+                  <Image url="@../images/lock.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="356.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="356.0" prefWidth="250.0" styleClass="hey" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="loginLabel" layoutX="23.0" layoutY="109.0" prefHeight="18.0" prefWidth="120.0" text="Login" />
-            <TextField fx:id="username" promptText="Username" layoutX="23.0" layoutY="147.0" prefHeight="26.0" prefWidth="194.0" />
-            <PasswordField fx:id="password" promptText="Password" layoutX="23.0" layoutY="197.0" prefHeight="26.0" prefWidth="194.0" />
-            <Button fx:id="loginButton" onAction="#handleLogin" layoutX="23.0" layoutY="247.0" mnemonicParsing="false"
-                    prefHeight="30.0" prefWidth="194.0" text="Login" />
+            <Label fx:id="loginLabel" layoutX="23.0" layoutY="107.0" prefHeight="18.0" prefWidth="120.0" text="Login" />
+
+            <Label fx:id="errorLabel" layoutX="23.0" layoutY="129.0" prefHeight="18.0" prefWidth="220.0" text="" />
+
+            <TextField fx:id="username" layoutX="23.0" layoutY="147.0" prefHeight="26.0" prefWidth="194.0" promptText="Username" />
+            <PasswordField fx:id="password" layoutX="23.0" layoutY="197.0" prefHeight="26.0" prefWidth="194.0" promptText="Password" />
+            <Button fx:id="loginButton" layoutX="23.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="30.0" prefWidth="194.0" text="Login" />
          </children>
       </AnchorPane>
    </right>
