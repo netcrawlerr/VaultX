@@ -1,0 +1,16 @@
+
+#unlockButton {
+  -fx-background-color: #2da37a;  
+  -fx-text-fill: white; 
+  -fx-padding: 5 15;  
+  -fx-background-radius: 10;  
+  -fx-alignment: center;  
+}
+
+#unlockButton:hover {
+  -fx-background-color: #206d54;  
+}
+
+#folderLabel {
+  -fx-text-fill: rgb(171, 173, 176);
+}
